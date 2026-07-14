@@ -1,4 +1,3 @@
-// Menambahkan efek interaktif sederhana pada tombol "Kirim Salam Pramuka"
 document.addEventListener('DOMContentLoaded', function() {
     const tombolSapaan = document.getElementById('btnSapaan');
     
