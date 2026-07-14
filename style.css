@@ -1,122 +1,211 @@
-/* Variabel Warna Utama */
+/* Palet Warna Mewah (Premium Black & Intense Red) */
 :root {
-    --cokelat-pramuka: #513624;
-    --cokelat-muda: #6f4e37;
-    --oranye-setangan: #e67e22;
-    --oranye-hover: #d35400;
+    --bg-pure-black: #0c0c0c;
+    --bg-dark-gray: #161616;
+    --bg-light-dark: #1e1e1e;
+    --red-luxury: #c00707;
+    --red-hover: #e60000;
+    --gold-accent: #d4af37;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-pure-black);
+    color: #ffffff;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Navbar Custom */
-.navbar-pramuka {
-    background-color: var(--cokelat-pramuka);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Navbar Style */
+.navbar-premium {
+    background-color: rgba(12, 12, 12, 0.95);
+    border-bottom: 2px solid var(--red-luxury);
+    backdrop-filter: blur(10px);
+}
+
+.logo-nav {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: #ffffff;
 }
 
 .nav-link {
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.nav-link:hover {
-    color: var(--oranye-setangan) !important;
-    transform: translateY(-1px);
-}
-
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-                url('https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
-    color: white;
-    padding: 140px 0;
-}
-
-/* Animasi Judul Hero */
-.scale-up {
-    animation: scaleIn 1s ease-in-out;
-}
-
-@keyframes scaleIn {
-    0% { transform: scale(0.9); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-/* Tombol Aksentuasi */
-.btn-pramuka {
-    background-color: var(--oranye-setangan);
-    color: white;
     font-weight: 600;
-    padding: 10px 28px;
-    border-radius: 30px;
-    border: none;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
-.btn-pramuka:hover {
-    background-color: var(--oranye-hover);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+.nav-link:hover {
+    color: var(--red-luxury) !important;
 }
 
-/* Section Styling */
-.section-title {
-    color: var(--cokelat-pramuka);
+/* Hero Section Style */
+.hero-luxury {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
+                url('https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+    min-height: 85vh;
+}
+
+.badge-luxury {
+    background-color: var(--red-luxury);
+    color: #fff;
+    padding: 6px 16px;
+    font-size: 0.8rem;
     font-weight: 700;
+    text-uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fw-extrabold {
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.text-danger-luxury {
+    color: var(--red-luxury);
+    text-shadow: 0 0 15px rgba(192, 7, 7, 0.4);
+}
+
+.style-sub {
+    max-width: 600px;
+}
+
+/* Tombol Premium */
+.btn-luxury {
+    background: linear-gradient(45deg, var(--red-luxury), #800000);
+    color: #fff;
+    font-weight: 700;
+    text-uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 12px 36px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-luxury:hover {
+    background: linear-gradient(45deg, var(--red-hover), var(--red-luxury));
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(192, 7, 7, 0.5);
+}
+
+/* Bagian Judul Modul */
+.section-title {
+    font-weight: 800;
+    text-uppercase: true;
+    letter-spacing: 1px;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 3px;
-    background-color: var(--oranye-setangan);
-    margin: 10px auto 0;
+    width: 50px;
+    height: 4px;
+    background-color: var(--red-luxury);
+    margin: 12px auto 0;
 }
 
 .section-title-left::after {
-    margin: 10px 0 0 0;
+    margin: 12px 0 0 0;
 }
 
-/* Card Dokumentasi */
-.card-kegiatan {
-    border: none;
-    border-radius: 12px;
+/* Layout Konten */
+.bg-dark-profile {
+    background-color: var(--bg-dark-gray);
+}
+
+.bg-black-luxury {
+    background-color: var(--bg-pure-black);
+}
+
+/* Efek Bingkai Gambar Profil */
+.frame-luxury {
+    position: relative;
+    border: 3px solid var(--bg-light-dark);
+    padding: 10px;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.frame-luxury::before {
+    content: '';
+    position: absolute;
+    top: -6px; left: -6px; right: -6px; bottom: -6px;
+    border: 2px solid var(--red-luxury);
+    z-index: 0;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.image-zoom {
+    transition: transform 0.4s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.image-zoom:hover {
+    transform: scale(1.02);
+}
+
+/* Card Modul Kegiatan */
+.card-luxury {
+    background-color: var(--bg-dark-gray);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.card-kegiatan:hover {
+.card-luxury:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+    border-color: var(--red-luxury);
+    box-shadow: 0 15px 30px rgba(192, 7, 7, 0.2) !important;
 }
 
-.card-kegiatan img {
-    height: 220px;
+.card-luxury img {
+    height: 230px;
     object-fit: cover;
+    filter: grayscale(20%);
+    transition: all 0.3s ease;
 }
 
-/* List Prestasi */
-.list-prestasi-item {
-    border-left: 4px solid var(--oranye-setangan) !important;
-    transition: background-color 0.2s ease;
+.card-luxury:hover img {
+    filter: grayscale(0%);
 }
 
-.list-prestasi-item:hover {
-    background-color: #f8f9fa;
+/* List Prestasi Mewah */
+.list-luxury-item {
+    background-color: var(--bg-light-dark) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-left: 4px solid var(--red-luxury) !important;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
+
+.badge-gold { background-color: var(--gold-accent); color: #000; font-weight: 700;}
+.badge-silver { background-color: #b8b8b8; color: #000; font-weight: 700;}
+.badge-bronze { background-color: #cd7f32; color: #000; font-weight: 700;}
 
 /* Footer */
 footer {
-    background-color: var(--cokelat-pramuka);
-    color: #dcdcdc;
-    padding: 40px 0;
-    border-top: 4px solid var(--oranye-setangan);
+    background-color: #060606;
+    border-top: 3px solid var(--red-luxury);
+}
+
+.logo-footer {
+    height: 45px;
+    width: auto;
 }
