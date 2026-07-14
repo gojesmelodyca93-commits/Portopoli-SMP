@@ -1,0 +1,122 @@
+/* Variabel Warna Utama */
+:root {
+    --cokelat-pramuka: #513624;
+    --cokelat-muda: #6f4e37;
+    --oranye-setangan: #e67e22;
+    --oranye-hover: #d35400;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Custom */
+.navbar-pramuka {
+    background-color: var(--cokelat-pramuka);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--oranye-setangan) !important;
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+    color: white;
+    padding: 140px 0;
+}
+
+/* Animasi Judul Hero */
+.scale-up {
+    animation: scaleIn 1s ease-in-out;
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Tombol Aksentuasi */
+.btn-pramuka {
+    background-color: var(--oranye-setangan);
+    color: white;
+    font-weight: 600;
+    padding: 10px 28px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-pramuka:hover {
+    background-color: var(--oranye-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+}
+
+/* Section Styling */
+.section-title {
+    color: var(--cokelat-pramuka);
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--oranye-setangan);
+    margin: 10px auto 0;
+}
+
+.section-title-left::after {
+    margin: 10px 0 0 0;
+}
+
+/* Card Dokumentasi */
+.card-kegiatan {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-kegiatan:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-kegiatan img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* List Prestasi */
+.list-prestasi-item {
+    border-left: 4px solid var(--oranye-setangan) !important;
+    transition: background-color 0.2s ease;
+}
+
+.list-prestasi-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Footer */
+footer {
+    background-color: var(--cokelat-pramuka);
+    color: #dcdcdc;
+    padding: 40px 0;
+    border-top: 4px solid var(--oranye-setangan);
+}
